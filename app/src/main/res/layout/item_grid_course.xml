@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="1dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_grid_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_grid_course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#CCFFFFFF"
+                android:textSize="8sp" />
+            <TextView
+                android:id="@+id/tv_grid_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#CCFFFFFF"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+        <!-- 找回导航按钮：放在小格子的右上角 -->
+        <ImageView
+            android:id="@+id/iv_grid_nav"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:padding="2dp"
+            android:src="@android:drawable/ic_menu_directions"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

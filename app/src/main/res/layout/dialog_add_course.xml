@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加新课程"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_course_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="课程名称 (如: 高等数学)" />
+
+    <EditText
+        android:id="@+id/et_teacher_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="教师姓名" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_day_of_week"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="星期(1-7)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:hint="教室 (如: 正心110)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_start_period"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="开始节次"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_end_period"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="结束节次"
+            android:inputType="number" />
+    </LinearLayout>
+
+</LinearLayout>

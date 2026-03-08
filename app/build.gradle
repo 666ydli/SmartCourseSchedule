@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.hilt)
+}
+
+android {
+    namespace 'com.example.smartcourseschedule'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.smartcourseschedule"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.google.material
+
+    // ... 保持原有的依赖（如 appcompat, material, constraintlayout 等）不变 ...
+
+    // 1. Room 数据库组件 (用于本地 SQLite 存储)
+    def room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version") // Java 必须使用 annotationProcessor
+
+    // 2. Lifecycle 组件 (用于 ViewModel 和 LiveData)
+    def lifecycle_version = "2.6.2"
+    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata:$lifecycle_version")
+
+    // 3. Glide 图片加载库 (用于加载和处理自定义背景)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+
+    // 添加 Hilt 依赖 (使用刚才在 toml 中定义的别名)
+    implementation(libs.hilt.android)
+    // 注意：Java 项目必须使用 annotationProcessor
+    annotationProcessor(libs.hilt.compiler)
+    implementation(libs.glide.transformations)
+}
