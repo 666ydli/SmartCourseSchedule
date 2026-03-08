@@ -40,11 +40,17 @@
         <receiver android:name=".utils.AlarmReceiver" android:exported="false"/>
         <service
             android:name=".utils.WidgetService"
-            android:permission="android.permission.BIND_REMOTEVIEWS" />
-        <receiver android:name=".utils.TodayCourseWidget" android:exported="true">
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false" />
+        <receiver
+            android:name=".utils.TodayCourseWidget"
+            android:exported="false">
+
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.smartcourseschedule.ACTION_REFRESH_WIDGET" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/today_widget_info" />
