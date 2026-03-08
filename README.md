@@ -43,13 +43,13 @@ SmartCourseSchedule 是一个基于 Android 的智能课程表应用，用于帮
 下面展示应用的一些主要功能界面：
 
 ### 课表主界面
-![schedule](screenshots/schedule.png)
+![schedule](screenshots/schedule.jpg)
 
 ### 添加课程
-![add-course](screenshots/add_course.png)
+![add-course](screenshots/add_course.jpg)
 
 ### 作业管理
-![homework](screenshots/homework.png)
+![homework](screenshots/homework.jpg)
 
 ### 今日课程桌面小组件
 ![widget](screenshots/widget.png)
